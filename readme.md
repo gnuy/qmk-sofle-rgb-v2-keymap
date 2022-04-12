@@ -8,7 +8,7 @@ After you followed [QMK Setup guide](https://beta.docs.qmk.fm/tutorial/newbs_get
 
 ```bash
 # qmk_firmware
-git submodule add https://github.com/edderrd/qmk-sofle-rgb-v2-keymap keyboards/sofle/keymaps/edder
+git submodule add git@github.com:gnuy/qmk-sofle-rgb-v2-keymap.git
 ```
 
 # Configuring VIA / Vial App
@@ -37,7 +37,7 @@ This firmware will not auto-recognize until [PR #1060](https://github.com/the-vi
 
 Make example for this keyboard (after setting up your build environment):
 
-    make sofle/keyhive:edder
+    make sofle/keyhive:gnuy 
 
 ## Flashing
 
@@ -48,12 +48,12 @@ Press reset button on the keyboard when asked.
 Disconnect the first half, connect the second one and repeat the process.
 
     # for Pro Micro-based builds
-    make sofle/keyhive:edder:avrdude-split-left
-    make sofle/keyhive:edder:avrdude-split-right
+    make sofle/keyhive:gnuy:avrdude-split-left
+    make sofle/keyhive:gnuy:avrdude-split-right
 
     # for Elite C or DFU bootloader builds
-    make sofle/keyhive:edder:dfu-split-left
-    make sofle/keyhive:edder:dfu-split-right
+    make sofle/keyhive:gnuy:dfu-split-left
+    make sofle/keyhive:gnuy:dfu-split-right
 
 See the [build environment setup](https://docs.qmk.fm/#/getting_started_build_tools) and the [make instructions](https://docs.qmk.fm/#/getting_started_make_guide) for more information. Brand new to QMK? Start with our [Complete Newbs Guide](https://docs.qmk.fm/#/newbs).
 
